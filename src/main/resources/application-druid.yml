@@ -39,3 +39,5 @@ spring:
       stat-view-servlet:
         url-pattern: "/druid/*"
         reset-enable: false
+        login-username: admin
+        login-password: 1121345678

@@ -1,9 +1,5 @@
 package com.gavin.mybatis;
 
-import com.alibaba.fastjson.JSONArray;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.gavin.mybatis.common.CustomIdGenerator;
 import com.gavin.mybatis.mapper.UserinfoMapper;
 import com.gavin.mybatis.model.entity.Userinfo;
@@ -42,11 +38,11 @@ class MybatisApplicationTests {
 //        List<Userinfo> list = userinfoMapper.selectList(new QueryWrapper<Userinfo>().eq("manager_id",3));
 //        log.info("查询结果：{}", JSONArray.toJSONString(list));
 //
-        QueryWrapper<Userinfo> wrapper1 = new QueryWrapper<>();
-        wrapper1.eq("manager_id", 3L);
-        IPage<Userinfo> page = userinfoMapper.selectPage(new Page<>(2,5), wrapper1);
-        log.info("{}", JSONArray.toJSONString(page));
-
+//        QueryWrapper<Userinfo> wrapper1 = new QueryWrapper<>();
+//        wrapper1.eq("manager_id", 3L);
+//        IPage<Userinfo> page = userinfoMapper.selectPage(new Page<>(2,5), wrapper1);
+//        log.info("{}", JSONArray.toJSONString(page));
+//
 //        userinfoService.removeById(11L);
 
 
