@@ -1,32 +1,38 @@
-server:
-  port: 9011
-
-spring:
-  profiles:
-    active: druid
-
-
 nacos:
   config:
-    server-addr: 127.0.0.1:8848
+    server-addr: 127.0.0.1
+    type: yaml
+    auto-refresh: true
+    data-id: mybatis.yml
+    remote-first: true
+    namespace: 3ad67c85-370a-448d-ac94-c7c3aa3613a5
+    bootstrap:
+      enable: true
 
 
+#server:
+#  port: 9011
+#
+#spring:
+#  profiles:
+#    active: druid
+#
+#mybatis-plus:
+#  mapper-locations: classpath*:mapper/*.xml
+#  config-location:
+#    cache-enabled: true
+##    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+##    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+#  global-config:
+#    db-config:
+#      logic-delete-field: flag  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+#      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+#      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+##  type-enums-package:   #扫描通用枚举
+#
+#
+## 在application.yml 中增加配置，指定 mapper 文件所在的包，进入DEBUG模式
+#logging:
+#  level:
+#    com.gavin.mybatis.mapper: trace
 
-
-mybatis-plus:
-  mapper-locations: classpath*:mapper/*.xml
-  config-location:
-    cache-enabled: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  global-config:
-    db-config:
-      logic-delete-field: flag  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
-      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
-      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
-#  type-enums-package:   #扫描通用枚举
-
-
-# 在application.yml 中增加配置，指定 mapper 文件所在的包，进入DEBUG模式
-logging:
-  level:
-    com.gavin.mybatis.mapper: trace
